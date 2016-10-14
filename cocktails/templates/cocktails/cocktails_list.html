@@ -1,0 +1,11 @@
+<div>
+    <h1><a href="/">Twaddlac's Cocktail List'</a></h1>
+</div>
+
+{% for cocktail in cocktails %}
+    <div>
+        <p>ingredients: {{ cocktail.ingredients }}</p>
+        <h1><a href="">{{ cocktail.name }}</a></h1>
+        <p>{{ cocktail.desc }}</p>
+    </div>
+{% endfor %}
