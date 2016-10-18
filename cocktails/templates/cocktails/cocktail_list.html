@@ -1,0 +1,22 @@
+{% load staticfiles %}
+<html>  
+
+<div>
+    <head>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="{% static 'css/cocktail.css' %}">
+        <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+        <h1><a href="/">Twaddlac's Cocktail List</a></h1>
+    </head>
+</div>
+
+    {% for cocktail in cocktails %}
+        <div>
+            <h2><a href="">{{ cocktail.name }}</a></h2>
+            <p>ingredients: {{ cocktail.ingredients }}</p>
+            <p>{{ cocktail.desc }}</p>
+        </div>
+    {% endfor %}
+
+</html>
